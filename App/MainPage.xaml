@@ -1,13 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App.MainPage">
+             x:Class="App.MainPage"
+             BackgroundImageSource="principal.png"
+             >
 
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <Label Text="Canetas de Luxo"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               VerticalOptions="Start" 
+               Margin="10"/>
 
+            <Button Text="Consultar Canetas" Clicked="Button_Clicked"
+                        BackgroundColor="#D4AF37" 
+                        TextColor="#F8F8F8"
+                        BorderColor="#3E2723"
+                        BorderWidth="1" 
+                        CornerRadius="0"
+                        Padding="15"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                    />
+                    
+            <Button Text="Adicionar Caneta" Clicked="Button_Clicked_1"
+                        BackgroundColor="#D4AF37" 
+                        TextColor="#F8F8F8"
+                        BorderColor="#3E2723"
+                        BorderWidth="1" 
+                        CornerRadius="0"
+                        Padding="15"
+                        FontSize="20"
+                        FontAttributes="Bold"  />
         </VerticalStackLayout>
     </ScrollView>
 

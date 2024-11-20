@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App.Views.EditarCaneta"
-             Title="{Binding Fabricante}">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked"/>
-
-    </ContentPage.ToolbarItems>
-
+             x:Class="App.Views.EditarCaneta">
     <VerticalStackLayout Spacing="10" Padding="10">
-
+        <Label Text="{Binding Fabricante, StringFormat='Editar: {0}'}"
+               TextColor="#D4AF37"
+               FontSize="24"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               Background="#3E2723"
+               />
         <Label Text="Fabricante da Caneta:"/>
         <Entry x:Name="txt_Fabricante" Text="{Binding Fabricante}"/>
 
@@ -18,7 +18,15 @@
 
         <Label Text="Preço Unitário:"/>
         <Entry x:Name="preco_Caneta" Text="{Binding Preco}" Keyboard="Numeric" />
-
+        <Button Text="Salvar" Clicked="ToolbarItem_Clicked"
+                        BackgroundColor="#D4AF37" 
+                        TextColor="#F8F8F8"
+                        BorderColor="#3E2723"
+                        BorderWidth="1" 
+                        CornerRadius="0"
+                        Padding="15"
+                        FontSize="15"
+                        FontAttributes="Bold"/>
 
     </VerticalStackLayout>
 </ContentPage>

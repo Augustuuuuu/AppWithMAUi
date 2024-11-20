@@ -9,7 +9,7 @@ public partial class NovaCaneta : ContentPage
 		InitializeComponent();
 	}
 
-    private async void ToolbarItem_Clicked(object sender, EventArgs e)
+    private async void Button_Clicked(object sender, EventArgs e)
     {
 		try
 		{

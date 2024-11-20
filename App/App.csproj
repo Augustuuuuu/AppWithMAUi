@@ -60,6 +60,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="Images\**" />
+	  <AndroidResource Remove="NovaPasta\**" />
+	  <Compile Remove="Images\**" />
+	  <Compile Remove="NovaPasta\**" />
+	  <EmbeddedResource Remove="Images\**" />
+	  <EmbeddedResource Remove="NovaPasta\**" />
+	  <MauiCss Remove="Images\**" />
+	  <MauiCss Remove="NovaPasta\**" />
+	  <MauiXaml Remove="Images\**" />
+	  <MauiXaml Remove="NovaPasta\**" />
+	  <None Remove="Images\**" />
+	  <None Remove="NovaPasta\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.0" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.9.172" />

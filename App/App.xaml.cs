@@ -29,7 +29,7 @@ namespace App
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new NavigationPage(new ListaCaneta()));
+            return new Window(new NavigationPage(new MainPage()));
         }
     }
 }

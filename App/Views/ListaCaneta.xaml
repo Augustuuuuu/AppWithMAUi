@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App.Views.ListaCaneta"
-             Title="Minhas Canetas">
+             x:Class="App.Views.ListaCaneta">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Somar" Clicked="ToolbarItem_Clicked_1" />
         <ToolbarItem Text="Adicionar" Clicked="ToolbarItem_Clicked"/>
-        
-
-
     </ContentPage.ToolbarItems>
     <VerticalStackLayout>
+        <Label Text="Minhas Canetas"
+               TextColor="#D4AF37"
+               FontSize="24"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               Background="#3E2723"
+               />
         <SearchBar x:Name="txt_Search" 
                    Placeholder="Busca de Produtos"
                    TextChanged="txt_Search_TextChanged"/>
         <ListView x:Name="listaProdutos" ItemSelected="listaProdutos_ItemSelected">
             <ListView.Header>
                 <Grid ColumnDefinitions="*, *, *, *, *">
-                    <Label Grid.Column="0" Text="Id"/>
-                    <Label Grid.Column="1" Text="Fabricante"/>
-                    <Label Grid.Column="2" Text="Cor"/>
-                    <Label Grid.Column="3" Text="Preço (R$)"/>
-                    <Label Grid.Column="4" Text="Total"/>
+                    <Label Grid.Column="0" Text="Id" TextColor="#D4AF37"/>
+                    <Label Grid.Column="1" Text="Fabricante" TextColor="#D4AF37"/>
+                    <Label Grid.Column="2" Text="Cor" TextColor="#D4AF37"/>
+                    <Label Grid.Column="3" Text="Preço (R$)" TextColor="#D4AF37"/>
+                    <Label Grid.Column="4" Text="Total" TextColor="#D4AF37"/>
                 </Grid>
             </ListView.Header>
             <ListView.ItemTemplate>
@@ -43,5 +46,28 @@
             </ListView.ItemTemplate>
 
         </ListView>
+        <HorizontalStackLayout HorizontalOptions="Center" >
+            <Button Text="Adicionar" Clicked="ToolbarItem_Clicked"
+                        BackgroundColor="#D4AF37" 
+                        TextColor="#F8F8F8"
+                        BorderColor="#3E2723"
+                        BorderWidth="1" 
+                        CornerRadius="0"
+                        Padding="15"
+                        FontSize="12"
+                        FontAttributes="Bold"
+                    />
+                    
+            <Button Text="Somar" Clicked="ToolbarItem_Clicked_1"
+                        BackgroundColor="#D4AF37" 
+                        TextColor="#F8F8F8"
+                        BorderColor="#3E2723"
+                        BorderWidth="1" 
+                        CornerRadius="0"
+                        Padding="15"
+                        FontSize="12"
+                        FontAttributes="Bold"
+                    />
+        </HorizontalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
