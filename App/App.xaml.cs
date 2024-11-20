@@ -1,4 +1,6 @@
-﻿namespace App
+﻿using App.Views;
+
+namespace App
 {
     public partial class App : Application
     {
@@ -9,7 +11,8 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
+            // Substitua AppShell por NavigationPage
+            return new Window(new NavigationPage(new ListaCaneta()));
         }
     }
 }

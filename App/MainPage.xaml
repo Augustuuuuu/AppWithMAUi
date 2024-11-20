@@ -8,17 +8,6 @@
             Padding="30,0"
             Spacing="25">
 
-
-            <Label Text= "Nome da Caneta:" />
-            <Entry x:Name="txt_Caneta" />
-            
-            <Label Text= "Preço da Caneta:" />
-            <Entry x:Name="txt_Preco" Placeholder="R$ "/>
-
-            <Label Text= "Cor da Caneta:" />
-            <Entry x:Name="cor_Caneta" />
-
-            <Button Text="Adicionar caneta" Clicked="Button_Clicked"/>
         </VerticalStackLayout>
     </ScrollView>
 
