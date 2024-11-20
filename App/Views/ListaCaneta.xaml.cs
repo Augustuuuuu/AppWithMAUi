@@ -18,7 +18,8 @@ public partial class ListaCaneta : ContentPage
     protected async override void OnAppearing()
     {
 		try
-		{
+		{	
+			lista.Clear();
 			List<Caneta> tmp = await App.Db.GetAll();
 
 			tmp.ForEach(x => lista.Add(x)); // Toda vez que a tela aparecer ele consulta o SQlite
