@@ -9,5 +9,7 @@ namespace App.Models
         public string Fabricante { get; set; }
         public string Cor { get; set; }
         public double Preco { get; set;}
+
+        public double Total { get => Preco; }
     }
 }

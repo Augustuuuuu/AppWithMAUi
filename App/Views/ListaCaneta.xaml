@@ -2,11 +2,46 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App.Views.ListaCaneta"
-             Title="ListaCaneta">
+             Title="Minhas Canetas">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Somar" Clicked="ToolbarItem_Clicked_1" />
+        <ToolbarItem Text="Adicionar" Clicked="ToolbarItem_Clicked"/>
+        
+
+
+    </ContentPage.ToolbarItems>
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <SearchBar x:Name="txt_Search" 
+                   Placeholder="Busca de Produtos"
+                   TextChanged="txt_Search_TextChanged"/>
+        <ListView x:Name="listaProdutos" ItemSelected="listaProdutos_ItemSelected">
+            <ListView.Header>
+                <Grid ColumnDefinitions="*, *, *, *, *">
+                    <Label Grid.Column="0" Text="Id"/>
+                    <Label Grid.Column="1" Text="Fabricante"/>
+                    <Label Grid.Column="2" Text="Cor"/>
+                    <Label Grid.Column="3" Text="Preço (R$)"/>
+                    <Label Grid.Column="4" Text="Total"/>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Remover" Clicked="MenuItem_Clicked"/>
+                        </ViewCell.ContextActions>
+                        <Grid ColumnDefinitions="*, *, *, *, *">
+                            <Label Grid.Column="0" Text="{Binding Id}"/>
+                            <Label Grid.Column="1" Text="{Binding Fabricante}"/>
+                            <Label Grid.Column="2" Text="{Binding Cor}"/>
+                            <Label Grid.Column="3" Text="{Binding Preco}"/>
+                            <Label Grid.Column="4" Text="{Binding Total}"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+                
+            </ListView.ItemTemplate>
+
+        </ListView>
     </VerticalStackLayout>
 </ContentPage>
