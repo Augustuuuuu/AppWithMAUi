@@ -25,7 +25,7 @@
                         FontAttributes="Bold"
                     />
                     
-            <Button Text="Adicionar Caneta" Clicked="Button_Clicked_1"
+            <Button Text="Adicionar Canetas" Clicked="Button_Clicked_1"
                         BackgroundColor="#D4AF37" 
                         TextColor="#F8F8F8"
                         BorderColor="#3E2723"
